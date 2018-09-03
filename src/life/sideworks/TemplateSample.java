@@ -1,4 +1,8 @@
-package life.sideworks.template;
+package life.sideworks;
+
+import life.sideworks.template.AbstractDisplay;
+import life.sideworks.template.CharDisplay;
+import life.sideworks.template.StringDisplay;
 
 /**
  * @author shengboxu
