@@ -5,19 +5,19 @@ package life.sideworks.factory;
  */
 
 public class IDCard extends Product {
-    private String owner;
+    final private String owner;
 
-    IDCard(String owner) {
-        System.out.println(owner + "のカードを作ります。");
+    public IDCard(final String owner) {
+        System.out.println("we are creating the card for " + owner);
         this.owner = owner;
     }
 
     @Override
     public void use() {
-        System.out.println(this.owner + "のカードを使います。");
+        System.out.println("we are using the card of " + owner);
     }
 
     public String getOwner() {
-        return this.owner;
+        return owner;
     }
 }

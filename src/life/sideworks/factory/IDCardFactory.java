@@ -8,19 +8,20 @@ import java.util.List;
  */
 
 public class IDCardFactory extends Factory {
-    private List owners = new ArrayList();
+    // This list class should have add methods as we are using it in registerProduct.
+    private final List<Product> owners = new ArrayList();
 
     @Override
-    protected Product createProduct(String owner) {
+    protected Product createProduct(final String owner) {
         return new IDCard(owner);
     }
 
     @Override
-    protected void registerProduct(Product product) {
-        this.owners.add(((IDCard)product).getOwner());
+    protected void registerProduct(final Product product) {
+        owners.add(product);
     }
 
-    public List getOwners() {
-        return this.owners;
+    public List<Product> getOwners() {
+        return owners;
     }
 }

@@ -5,11 +5,12 @@ package life.sideworks.factory;
  */
 
 public abstract class Factory {
-    public final Product create(String owner) {
-        Product p = createProduct(owner);
-        registerProduct(p);
-        return p;
+    public final Product create(final String owner) {
+        final Product product = createProduct(owner);
+        registerProduct(product);
+        return product;
     }
-    protected abstract Product createProduct(String string);
-    protected abstract void registerProduct(Product product);
+
+    protected abstract Product createProduct(final String owner);
+    protected abstract void registerProduct(final Product product);
 }
